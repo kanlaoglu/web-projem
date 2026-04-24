@@ -1,9 +1,20 @@
+
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #f4f6f9;
     font-family: Arial, sans-serif;
     color: #222;
     margin: 0;
     padding: 0;
+}
+
+main {
+    flex: 1;
 }
 
 .navbar-brand {
@@ -22,6 +33,7 @@ body {
     background: linear-gradient(135deg, #0d6efd, #6ea8fe);
     color: white;
     padding: 100px 20px;
+    text-align: center;
 }
 
 .hero-section h1 {
@@ -41,6 +53,17 @@ body {
 .card-title {
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.carousel img {
+    height: 60vh;       /* ekranın %60'ı */
+    width: 100%;
+    object-fit: cover;  /* kırp ama bozma */
+    border-radius: 12px;
+}
+
+.bg-white {
+    border-radius: 12px;
 }
 
 footer {
