@@ -1,14 +1,18 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $adsoyad = $_POST["adsoyad"];
-    $email = $_POST["email"];
-    $telefon = $_POST["telefon"];
-    $cinsiyet = $_POST["cinsiyet"];
+    $adsoyad = htmlspecialchars($_POST["adsoyad"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $telefon = htmlspecialchars($_POST["telefon"]);
+    $cinsiyet = htmlspecialchars($_POST["cinsiyet"]);
     $ilgiler = isset($_POST["ilgiler"]) ? $_POST["ilgiler"] : [];
-    $sehir = $_POST["sehir"];
-    $dogumTarihi = $_POST["dogumTarihi"];
-    $mesaj = $_POST["mesaj"];
+    $sehir = htmlspecialchars($_POST["sehir"]);
+    $dogumTarihi = htmlspecialchars($_POST["dogumTarihi"]);
+    $mesaj = htmlspecialchars($_POST["mesaj"]);
+
+} else {
+    header("Location: iletisim.html");
+    exit();
 }
 ?>
 
@@ -46,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <td>
                 <?php 
                 if (!empty($ilgiler)) {
-                    echo implode(", ", $ilgiler);
+                    echo htmlspecialchars(implode(", ", $ilgiler));
                 } else {
                     echo "Seçilmedi";
                 }
