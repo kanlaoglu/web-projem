@@ -27,36 +27,37 @@ function formKontrol() {
     }
 
     if (adsoyad === "" || email === "" || telefon === "" || sehir === "" || dogumTarihi === "" || mesaj === "") {
-        alert("Lütfen tüm alanları doldurunuz.");
+        alert("JavaScript kontrolü: Lütfen tüm alanları doldurunuz.");
         return false;
     }
 
     if (!cinsiyetSecildi) {
-        alert("Lütfen cinsiyet seçiniz.");
+        alert("JavaScript kontrolü: Lütfen cinsiyet seçiniz.");
         return false;
     }
 
     if (!ilgiSecildi) {
-        alert("Lütfen en az bir ilgi alanı seçiniz.");
+        alert("JavaScript kontrolü: Lütfen en az bir ilgi alanı seçiniz.");
         return false;
     }
 
     const emailKontrol = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailKontrol.test(email)) {
-        alert("Lütfen geçerli bir e-posta adresi giriniz.");
+        alert("JavaScript kontrolü: Lütfen geçerli bir e-posta adresi giriniz.");
         return false;
     }
 
     const telefonKontrol = /^[0-9]+$/;
     if (!telefonKontrol.test(telefon)) {
-        alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+        alert("JavaScript kontrolü: Telefon numarası sadece rakamlardan oluşmalıdır.");
         return false;
     }
 
     if (telefon.length < 10) {
-        alert("Telefon numarası en az 10 haneli olmalıdır.");
+        alert("JavaScript kontrolü: Telefon numarası en az 10 haneli olmalıdır.");
         return false;
     }
 
+    alert("JavaScript kontrolü başarılı.");
     return true;
 }
