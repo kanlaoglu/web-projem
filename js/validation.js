@@ -1,4 +1,4 @@
-function formKontrol() {
+function formKontrol(mesajGoster = false) {
     const adsoyad = document.getElementById("adsoyad").value.trim();
     const email = document.getElementById("email").value.trim();
     const telefon = document.getElementById("telefon").value.trim();
@@ -58,6 +58,19 @@ function formKontrol() {
         return false;
     }
 
-    alert("JavaScript kontrolü başarılı.");
+    if (mesajGoster) {
+        alert("JavaScript kontrolü başarılı.");
+    }
+
     return true;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const jsKontrolBtn = document.getElementById("jsKontrolBtn");
+
+    if (jsKontrolBtn) {
+        jsKontrolBtn.addEventListener("click", function () {
+            formKontrol(true);
+        });
+    }
+});
