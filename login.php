@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="mb-0">Giriş işlemi başarıyla gerçekleşti.</p>
         </div>
 
-        <a href="anasayfa.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+        <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
     </div>
 </div>
 
